@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+
+  keycloak:
+    image: jboss/keycloak:12.0.4
+    networks:
+      - keycloak
+    environment:
+      - DB_ADDR=keycloak-db
+      - DB_DATABASE=keycloak
+      - DB_USER=admin
+      - DB_PASSWORD=admin
+      - DB_VENDOR=postgres
+      - KEYCLOAK_USER=admin
+      - KEYCLOAK_PASSWORD=admin
+      - KEYCLOAK_IMPORT=/tmp/dotbase-realm.json
+    ports:
+      - 8080:8080
+    volumes:
+      - ./theme:/opt/jboss/keycloak/themes/dotbase
+      - ./dev/dev-realm.json:/tmp/dotbase-realm.json
+      - ./dev/standalone-ha.xml:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
+
+  keycloak-db:
+    image: postgres:13-alpine
+    networks:
+      - keycloak
+    volumes:
+      - keycloak-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=keycloak
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+
+networks:
+  keycloak:
+
+volumes:
+  keycloak-data:

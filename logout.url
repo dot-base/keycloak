@@ -1,0 +1,1 @@
+sso.movebase.charite.de/auth/realms/movebase/protocol/openid-connect/logout?redirect_uri=https://traefik.movebase.charite.de/_oauth/logout

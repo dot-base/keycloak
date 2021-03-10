@@ -1,0 +1,1 @@
+http://127.0.0.1:8080/auth/realms/dotbase/protocol/openid-connect/auth?client_id=central-proxy&redirect_uri=http%3A%2F%2F127.0.0.1%3A8080%2F&response_type=code

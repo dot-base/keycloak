@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url('../webfonts/Roboto-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url('../webfonts/Roboto-Medium.woff2') format('woff2');
+}
+
+html, body, body > div {
+    height: 100%;
+}
+
+body, button, input, select, textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-image: url('../img/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom 0 right 0;
+}
+
+.title, .subtitle, a {
+    color: white;
+}
+
+.title:not(.is-spaced)+.subtitle {
+    margin-top: -0.5rem;
+}
+
+a {
+    font-weight: bold;
+}
+
+a:hover {
+    color: lightgray;
+}
+
+@media only screen and (min-width: 400px) {
+    html  {
+        font-size: 22px !important;
+    }
+}
+
+@media only screen and (min-width: 1000px) {    
+    body > div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.login-form > * {
+    max-width: 22rem;
+    flex: 1;
+
+}
+
+.logos {
+    display: flex
+}
+
+.logos > img {
+    height: 50px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .sign-in-form .title {
+        color: white;
+    }
+}
+
+input:focus {
+    border-color: #363636 !important;
+    box-shadow: none !important;
+}
