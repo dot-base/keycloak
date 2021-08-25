@@ -78,6 +78,15 @@ a:hover {
 
 }
 
+.login-options > * {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 0.75rem;
+    font-size: x-large;
+
+}
+
 .logos {
     display: flex
 }
