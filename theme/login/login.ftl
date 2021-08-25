@@ -56,11 +56,6 @@
                             </#if>
                         </div>
                   </div>
-
-                  <div id="kc-form-buttons" class="${properties.kcFormGroupClass!}">
-                      <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
-                      <input tabindex="4" class="button ${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
-                  </div>
             </form>
         </#if>
         </div>
@@ -75,11 +70,17 @@
         </#if>
       </div>
     <#elseif section = "info" >
+        <div class="login-options">
+        <div id="kc-form-buttons">
+            <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
+            <input tabindex="4" class="button ${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
+        </div>
         <#if realm.password && realm.registrationAllowed && !registrationDisabled??>
             <div id="kc-registration">
-                <span>${msg("noAccount")} <a tabindex="6" href="${url.registrationUrl}">${msg("doRegister")}</a></span>
+                <span><a tabindex="6" href="${url.registrationUrl}">${msg("noAccount")} » ${msg("doRegister")}</a></span>
             </div>
         </#if>
+        </div>
     </#if>
 
 </@layout.registrationLayout>
