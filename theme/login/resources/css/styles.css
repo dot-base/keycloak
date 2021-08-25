@@ -21,6 +21,10 @@ body, button, input, select, textarea {
     font-family: 'Roboto', sans-serif;
 }
 
+.button {
+    margin-bottom: 1rem;
+}
+
 body {
     margin: 0;
     background-image: url('../img/background.svg');
