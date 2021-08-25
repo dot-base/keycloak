@@ -3,6 +3,9 @@
     <#if section = "header">
         ${msg("doLogIn")}
     <#elseif section = "form">
+    <header>
+        <h1 class="title mb-5">${msg("loginTitle")}</h1>
+    </header>
     <div id="kc-form" <#if realm.password && social.providers??>class="${properties.kcContentWrapperClass!}"</#if>>
       <div id="kc-form-wrapper" <#if realm.password && social.providers??>class="${properties.kcFormSocialAccountContentClass!} ${properties.kcFormSocialAccountClass!}"</#if>>
         <#if realm.password>

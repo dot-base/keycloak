@@ -3,6 +3,9 @@
     <#if section = "header">
         ${msg("registerTitle")}
     <#elseif section = "form">
+        <header>
+            <h1 class="title mb-5">${msg("registerTitle")}</h1>
+        </header>
         <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
             <div class="field">
                 <div class="${properties.kcInputWrapperClass!}">
