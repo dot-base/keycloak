@@ -58,16 +58,13 @@
 
     <div class="mx-6 my-5 ${properties.kcHeaderClass!}">
       <h1 class="title">Welcome to move.base!</h1>
-      <h2 class="subtitle">Enter your Charite credentials to sign in. If you have problems loggin in, <a href="mailto:movebase@charite.de">drop us a message</a>.</h2>
+      <h2 class="subtitle">Enter your credentials to sign in or register as a new user. If you have problems logging in, <a href="mailto:movebase@charite.de">drop us a message</a>.</h2>
       <div class="logos">
           <img src="${url.resourcesPath}/img/charite-logo.svg" />
       </div>
     </div>
 
     <div class="mx-6 my-5 sign-in-form">
-      <header>
-        <h1 class="title mb-5">Sign In</h1>
-      </header>
       <div id="kc-content">
         <div id="kc-content-wrapper">
 
