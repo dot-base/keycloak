@@ -49,6 +49,23 @@ a:hover {
     color: lightgray;
 }
 
+@media only screen and (max-width: 400px) {
+    html  {
+        font-size: 12px !important;
+    }
+    .g-recaptcha {
+        transform:scale(0.88);
+        transform-origin:0 0;
+        margin-bottom: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-height: 800px) {
+    html  {
+        font-size: 16px !important;
+    }
+}
+
 @media only screen and (min-width: 400px) {
     html  {
         font-size: 22px !important;
@@ -69,22 +86,24 @@ a:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
+    }    
 }
 
 .login-form > * {
     max-width: 22rem;
     flex: 1;
-
 }
 
-.login-options > * {
+.form-options > * {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
     margin-right: 0.75rem;
-    font-size: x-large;
+    font-size: 1rem;
+}
 
+.g-recaptcha {
+    margin-bottom: 0.75rem;
 }
 
 .logos {
@@ -105,3 +124,10 @@ input:focus {
     border-color: #363636 !important;
     box-shadow: none !important;
 }
+
+
+.alert {
+    color:#ec0f47;
+    font-size: 2rem;
+}
+

@@ -57,7 +57,7 @@
                         </div>
                     </div>
 
-                <div class="login-options">
+                <div class="form-options">
                     <div id="kc-form-buttons">
                         <input type="hidden" id="id-hidden-input" name="credentialId" <#if auth.selectedCredential?has_content>value="${auth.selectedCredential}"</#if>/>
                         <input tabindex="4" class="button ${properties.kcButtonClass!} ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" name="login" id="kc-login" type="submit" value="${msg("doLogIn")}"/>
@@ -68,7 +68,7 @@
                         </div>
                     </#if>
                 </div>
-                
+
             </form>
         </#if>
         </div>

@@ -100,12 +100,14 @@
             </#if>
 
             <div class="field">
-                 <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
-                    <input tabindex="4" class="button ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doRegister")}"/>
-                </div>
-                <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
-                    <div class="${properties.kcFormOptionsWrapperClass!}">
-                        <span><a href="${url.loginUrl}">${kcSanitize(msg("backToLogin"))?no_esc}</a></span>
+                <div class="form-options">
+                    <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
+                        <input tabindex="4" class="button ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doRegister")}"/>
+                    </div>
+                    <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
+                        <div class="${properties.kcFormOptionsWrapperClass!}">
+                            <span><a href="${url.loginUrl}">${kcSanitize(msg("backToLogin"))?no_esc}</a></span>
+                        </div>
                     </div>
                 </div>
             </div>
