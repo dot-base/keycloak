@@ -99,6 +99,12 @@
             </#if>
 
             <div class="field">
+                    <input type="checkbox" required name="checkbox" value="check" id="agree">
+                    <span>${msg("agreeStatement")}<a href="${msg("termsUrl")}" target="_blank" rel="noopener noreferrer"> ${msg("terms")}</a></span>
+                    </input>
+            </div>
+
+            <div class="field">
                 <div class="form-options">
                     <div id="kc-form-buttons" class="${properties.kcFormButtonsClass!}">
                         <input tabindex="4" class="button ${properties.kcButtonPrimaryClass!} ${properties.kcButtonBlockClass!} ${properties.kcButtonLargeClass!}" type="submit" value="${msg("doRegister")}"/>
