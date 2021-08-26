@@ -6,14 +6,14 @@
         <header>
             <h1 class="title mb-5">${msg("registerTitle")}</h1>
         </header>
-                    <#if recaptchaRequired??>
+        <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
+            <#if recaptchaRequired??>
                 <div class="form-group">
                     <div class="${properties.kcInputWrapperClass!}">
                         <div class="g-recaptcha" data-sEmailize="compact" data-sitekey="${recaptchaSiteKey}"></div>
                     </div>
                 </div>
             </#if>
-        <form id="kc-register-form" class="${properties.kcFormClass!}" action="${url.registrationAction}" method="post">
             <div class="field">
                 <div class="${properties.kcInputWrapperClass!}">
                   <p class="control has-icons-left has-icons-right">
