@@ -99,9 +99,10 @@
             </#if>
 
             <div class="field">
-                    <input type="checkbox" required name="checkbox" value="check" id="agree">
-                    <span>${msg("agreeStatement")}<a href="${msg("termsUrl")}" target="_blank" rel="noopener noreferrer"> ${msg("terms")}</a></span>
-                    </input>
+                <p>
+                    <input type="checkbox" required name="checkbox" value="check" id="agree"> ${msg("agreeStatement")}</input>
+                    <a href="${msg("termsUrl")}" target="_blank" rel="noopener noreferrer"> ${msg("terms")}</a>
+                </p>
             </div>
 
             <div class="field">
@@ -111,7 +112,7 @@
                     </div>
                     <div id="kc-form-options" class="${properties.kcFormOptionsClass!}">
                         <div class="${properties.kcFormOptionsWrapperClass!}">
-                            <span><a href="${url.loginUrl}">${kcSanitize(msg("backToLogin"))?no_esc}</a></span>
+                            <a href="${url.loginUrl}">${kcSanitize(msg("backToLogin"))?no_esc}</a>
                         </div>
                     </div>
                 </div>
