@@ -33,7 +33,7 @@ body {
     background-position: bottom 0 right 0;
 }
 
-.title, .subtitle, a {
+.title, .subtitle, a, p {
     color: white;
 }
 
@@ -129,7 +129,7 @@ input:focus {
     box-shadow: none !important;
 }
 
-.alert {
+.alert, span {
     color:#ec0f47;
     font-size: 1rem;
 }
