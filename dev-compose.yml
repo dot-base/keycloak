@@ -14,14 +14,12 @@ services:
       - DB_VENDOR=postgres
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=admin
-      - KEYCLOAK_IMPORT=/demo/realm.json
-      #- KEYCLOAK_IMPORT=/dev/realm.json
+      - KEYCLOAK_IMPORT=/dev/realm.json
     ports:
       - 8080:8080
     volumes:
       - ./theme:/opt/jboss/keycloak/themes/dotbase
-      - ./demo/realm.json:/demo/realm.json
-      #- ./dev/realm.json:/dev/realm.json
+      - ./dev/realm.json:/dev/realm.json
       - ./dev/standalone-ha.xml:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
 
   keycloak-db:
